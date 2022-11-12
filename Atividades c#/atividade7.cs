@@ -7,6 +7,5 @@ class ativ7{
         dobro = valor*2;
         Tparte = valor/3;
         Console.WriteLine($"o dobro de {valor} é: {dobro} e a terça parte de {valor} é: {Tparte}");
-        Console.WriteLine("incerteza");
     }
 }
