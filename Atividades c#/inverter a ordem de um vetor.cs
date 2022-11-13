@@ -5,6 +5,7 @@ class MOvetor
     {
         int[] valor = new int[4];
         int tam = valor.Length, aux = 0;
+        int a = valor.Length;
         for (int i = 0; i < tam; i++)
         {
             Console.WriteLine("digite um valor na {0}° posiçao",i+1);
@@ -13,8 +14,9 @@ class MOvetor
         for (int i = 0; i < tam; i++)
         {
             aux = valor[i];
-            valor[i] = valor[tam - 1];
-            valor[tam - 1] = aux;
+            valor[i] = valor[a - 1];
+            valor[a - 1] = aux;
+            a--;
         }
         for (int i = 0; i < tam; i++)
         {
