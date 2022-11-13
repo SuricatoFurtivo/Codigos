@@ -11,7 +11,7 @@ class MOvetor
             Console.WriteLine("digite um valor na {0}° posiçao",i+1);
             valor[i] = int.Parse(Console.ReadLine());
         }
-        for (int i = 0; i < tam; i++)
+        for (int i = 0; i < tam/2; i++)
         {
             aux = valor[i];
             valor[i] = valor[a - 1];
