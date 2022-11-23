@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int main() {
+int main() 
+{
     setlocale(LC_ALL,"portuguese");
     int valor1,valor2,resultado;
     printf("digite dois valores:\n");
