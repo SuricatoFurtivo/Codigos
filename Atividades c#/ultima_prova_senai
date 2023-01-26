@@ -18,8 +18,9 @@ class Program
     {
 
         Aluno[] aluno = new Aluno[2];
-        int op;
+        int op,aux;
         int indicador = 0;
+        aux = 0;
 
 
         Cadastro(ref aluno);
@@ -108,10 +109,32 @@ class Program
                 Buscar_aluno(ref aluno);
 
             break;
+            case 9:
+
+                aux++;
+
+            break;
+
+            default:
+
+                Console.Clear();
+
+                Console.WriteLine("Opçao desejada invalida");
+
+                Console.Clear();
+
+                Console.ReadKey();
+
+            break;
 
         }
-        goto inicio;
 
+        if(aux != 1)
+        {
+            goto inicio;
+        }
+
+        Console.Clear();
 
     }
     static void Cadastro(ref Aluno[] aluno_cadastro)
@@ -183,9 +206,11 @@ class Program
 
     static void Media_aprovados(ref Aluno[] aluno_media_aprovados)
     {
-        int i;
+        int i,cont;
 
-        for(i = 0; i < aluno_media_aprovados.Length; i++)
+        cont = 0;
+
+        for (i = 0; i < aluno_media_aprovados.Length; i++)
         {
 
             if (aluno_media_aprovados[i].media >= 7)
@@ -195,6 +220,14 @@ class Program
                 Console.WriteLine("Nome: {0}",aluno_media_aprovados[i].nome);
                 Console.WriteLine("Media: {0}",aluno_media_aprovados[i].media);
                 Console.WriteLine(" ");
+
+                cont++;
+
+            }
+            else if (aluno_media_aprovados[i].media < 7 && cont == 0)
+            {
+
+                Console.WriteLine("Não há aluns APROVADOS");
 
             }
 
@@ -394,5 +427,6 @@ class Program
         Console.Clear();
 
     }
+
 
 }
