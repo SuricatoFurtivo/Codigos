@@ -5,7 +5,7 @@ class program
     {
         Console.WriteLine("Hello, World!");
         
-        int numero1 = 57;
+        const int numero1 = 57;
 
     }
 }
